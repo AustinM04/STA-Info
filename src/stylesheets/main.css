@@ -1,3 +1,32 @@
 /* Your styles go here */
 @import url("bootstrap/dist/css/bootstrap.min.css");
 @import url("bootstrap-icons/font/bootstrap-icons.css");
+
+
+.webercolor{
+    background-color: #492365;
+}
+.text-responsive {
+    font-size: calc(100% + .3vw + .1vh);
+}
+
+
+
+.jumbo_bg{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/012/672/872/non_2x/abstract-blue-geometric-color-gradient-background-basic-shape-of-a-repeating-line-or-triangle-backdrop-pattern-with-the-concept-of-hi-tech-digital-technology-simple-modern-and-futuristic-vector.jpg");
+}
+
+.webertext{
+    color: #492365;
+}
+
+@media (min-width: 768px) {
+    .jumbo-text{
+        border-top-left-radius: 0;
+        
+    }
+    .wumbo_round{
+        border-radius: .5rem;
+    }
+}
+
