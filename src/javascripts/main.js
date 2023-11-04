@@ -87,6 +87,11 @@ let service = [
 
 ]
 
+for (let g =0, i = service.length; g < i; g++){
+  document.getElementById("grid").innerHTML +=
+  `<div class="col carhov" id="s${service[g].id}"></div>`
+}
+
 for(let s of service){
   let service_card = document.getElementById("s" + s.id).innerHTML += `
   <div class="card">
