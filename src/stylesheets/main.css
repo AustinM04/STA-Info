@@ -17,6 +17,11 @@
   color: #492365;
 }
 
+.active{
+  text-indent: 2rem;
+  background-color: #8446ac;
+}
+
 @media (min-width: 768px) {
   .jumbo-text {
     border-top-left-radius: 0;
@@ -30,4 +35,15 @@
   .carhov:hover{
     transform: scale(1.03);
   }
+  
 }
+
+@media (min-width: 992px) {
+  .active{
+    background-color: #8446ac;
+    border-radius: 2rem;
+    text-indent: 0;
+  }
+}
+
+

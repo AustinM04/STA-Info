@@ -10,16 +10,25 @@ document.getElementById("navbar").innerHTML = `
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link" aria-current="page" href="/pages/index.html">Home</a>
+              <a class="nav-link" href="/pages/index.html">Home</a>
               <a class="nav-link" href="/pages/maps&ous.html">Maps & OUs</a>
               <a class="nav-link" href="/pages/imaging.html">Imaging</a>
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link">Disabled</a>
             </div>
           </div>
         </div>
       </nav>
 
 `
+
+document.querySelectorAll('.nav-link').forEach(link => {
+  if(link.href === window.location.href){
+    link.classList.add('active')
+    link.setAttribute('aria-current', 'page')
+  }
+})
+
+
 let service = [
   {
     id: '1',
@@ -106,3 +115,4 @@ for(let s of service){
   </div>
   `
 }
+
