@@ -25,9 +25,9 @@
     border-radius: 0.5rem;
   }
   .carhov{
-    transition: transform .2s;
+    transition: transform .1s;
   }
   .carhov:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
   }
 }
