@@ -1,8 +1,7 @@
 //TODO - Your ES6 JavaScript code (if any) goes here
 import "bootstrap"
 
-
-document.getElementById('navbar').innerHTML = `
+document.getElementById("navbar").innerHTML = `
 <nav class="navbar navbar-expand-lg webercolor navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/pages/index.html"><i class="bi bi-cpu"></i> STA Spot</a>
@@ -20,9 +19,85 @@ document.getElementById('navbar').innerHTML = `
         </div>
       </nav>
 
-`;
+`
+let service = [
+  {
+    id: '1',
+    name: 'filler',
+    building: 'filler',
+    room: 'filler',
+    ou: 'filler'
+  },
+  {
+    id: '2',
+    name: 'filler',
+    building: 'filler',
+    room: 'filler',
+    ou: 'filler'
+  },
+  {
+    id: '3',
+    name: 'filler',
+    building: 'filler',
+    room: 'filler',
+    ou: 'filler'
+  },
+  {
+    id: '4',
+    name: 'filler',
+    building: 'filler',
+    room: 'filler',
+    ou: 'filler'
+  },
+  {
+    id: '5',
+    name: 'filler',
+    building: 'filler',
+    room: 'filler',
+    ou: 'filler'
+  },
+  {
+    id: '6',
+    name: 'filler',
+    building: 'filler',
+    room: 'filler',
+    ou: 'filler'
+  },
+  {
+    id: '7',
+    name: 'filler',
+    building: 'filler',
+    room: 'filler',
+    ou: 'filler'
+  },
+  {
+    id: '8',
+    name: 'filler',
+    building: 'filler',
+    room: 'filler',
+    ou: 'filler'
+  },
+  {
+    id: '9',
+    name: 'filler',
+    building: 'filler',
+    room: 'filler',
+    ou: 'filler'
+  }
 
+]
 
-
-
-
+for(let s of service){
+  let service_card = document.getElementById("s" + s.id).innerHTML += `
+  <div class="card">
+    <div class="card-header">
+    ${s.name}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Building: ${s.building}</li>
+      <li class="list-group-item">Room: ${s.room}</li>
+      <li class="list-group-item">OU: ${s.ou}</li>
+    </ul>
+  </div>
+  `
+}
