@@ -21,7 +21,7 @@ Visit http://localhost:8080/ in your browser (Chrome and/or Firefox are recommen
 When you are done with development and ready to deploy your application, run the following command:
 
 ```bash
-npm run deploy
+npm  run deploy
 ```
 
 or
