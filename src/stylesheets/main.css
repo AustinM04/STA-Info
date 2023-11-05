@@ -22,14 +22,18 @@
   background-color: #8446ac;
 }
 
-
+.nav-link{
+  margin-right: 1rem;
+  transition: all .5s ease;
+}
 
 
 @media (max-width:991px){
   .nav-link:hover{
-    background-color: #8446ac;
+    background: linear-gradient(90deg, #492365, #8446ac);
     color: white;
-    text-indent: 2rem;
+    
+    transform: translateX(2rem) ;
   }
   
 }
@@ -53,9 +57,14 @@
 @media (min-width: 992px) {
   .active{
     background-color: #492365;
-    border-radius: 2rem;
+    border-radius: 1rem;
     text-indent: 0;
     border: 1px solid white;
+  }
+
+  .nav-link:hover{
+    border-bottom: 1px solid lightgray;
+    transform: translateY(2px);
   }
 }
 
