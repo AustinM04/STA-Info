@@ -13,7 +13,9 @@ document.getElementById("navbar").innerHTML = `
               <a class="nav-link" href="/pages/index.html">Home</a>
               <a class="nav-link" href="/pages/maps&ous.html">Maps & OUs</a>
               <a class="nav-link" href="/pages/imaging.html">Imaging</a>
-              <a class="nav-link">Disabled</a>
+              <a class="nav-link" href="/pages/post-image.html">Post-Image</a>
+              <a class="nav-link" href="/pages/office-organization.html">Office Organization</a>
+              <a class="nav-link" href="/pages/readiness.html">Readiness</a>
             </div>
           </div>
         </div>

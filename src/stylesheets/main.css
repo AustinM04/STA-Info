@@ -22,6 +22,18 @@
   background-color: #8446ac;
 }
 
+
+
+
+@media (max-width:991px){
+  .nav-link:hover{
+    background-color: #8446ac;
+    color: white;
+    text-indent: 2rem;
+  }
+  
+}
+
 @media (min-width: 768px) {
   .jumbo-text {
     border-top-left-radius: 0;
@@ -40,9 +52,10 @@
 
 @media (min-width: 992px) {
   .active{
-    background-color: #8446ac;
+    background-color: #492365;
     border-radius: 2rem;
     text-indent: 0;
+    border: 1px solid white;
   }
 }
 
