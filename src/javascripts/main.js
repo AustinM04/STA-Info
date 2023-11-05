@@ -16,6 +16,7 @@ document.getElementById("navbar").innerHTML = `
               <a class="nav-link" href="/pages/post-image.html">Post-Image</a>
               <a class="nav-link" href="/pages/office-organization.html">Office Organization</a>
               <a class="nav-link" href="/pages/readiness.html">Readiness</a>
+              <a class="nav-link" href="/pages/faqs.html">FAQs</a>
             </div>
           </div>
         </div>
