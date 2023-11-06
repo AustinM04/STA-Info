@@ -1,5 +1,7 @@
 //TODO - Your ES6 JavaScript code (if any) goes here
 import "bootstrap"
+import { service } from "./service"
+import { items } from "./items"
 
 document.getElementById("navbar").innerHTML = `
 <nav class="navbar navbar-expand-lg webercolor navbar-dark py-1">
@@ -24,98 +26,72 @@ document.getElementById("navbar").innerHTML = `
 
 `
 
-document.querySelectorAll('.nav-link').forEach(link => {
-  if(link.href === window.location.href){
-    link.classList.add('active')
-    link.setAttribute('aria-current', 'page')
+document.querySelectorAll(".nav-link").forEach((link) => {
+  if (link.href === window.location.href) {
+    link.classList.add("active")
+    link.setAttribute("aria-current", "page")
   }
 })
 
-
-let service = [
-  {
-    id: '1',
-    name: 'filler',
-    building: 'filler',
-    room: 'filler',
-    ou: 'filler'
-  },
-  {
-    id: '2',
-    name: 'filler',
-    building: 'filler',
-    room: 'filler',
-    ou: 'filler'
-  },
-  {
-    id: '3',
-    name: 'filler',
-    building: 'filler',
-    room: 'filler',
-    ou: 'filler'
-  },
-  {
-    id: '4',
-    name: 'filler',
-    building: 'filler',
-    room: 'filler',
-    ou: 'filler'
-  },
-  {
-    id: '5',
-    name: 'filler',
-    building: 'filler',
-    room: 'filler',
-    ou: 'filler'
-  },
-  {
-    id: '6',
-    name: 'filler',
-    building: 'filler',
-    room: 'filler',
-    ou: 'filler'
-  },
-  {
-    id: '7',
-    name: 'filler',
-    building: 'filler',
-    room: 'filler',
-    ou: 'filler'
-  },
-  {
-    id: '8',
-    name: 'filler',
-    building: 'filler',
-    room: 'filler',
-    ou: 'filler'
-  },
-  {
-    id: '9',
-    name: 'filler',
-    building: 'filler',
-    room: 'filler',
-    ou: 'filler'
+if (window.location.pathname === "/pages/maps&ous.html") {
+  for (let g = 0, i = service.length; g < i; g++) {
+    document.getElementById("grid").innerHTML += `<div class="col carhov" id="s${service[g].id}"></div>`
   }
 
-]
-
-for (let g =0, i = service.length; g < i; g++){
-  document.getElementById("grid").innerHTML +=
-  `<div class="col carhov" id="s${service[g].id}"></div>`
-}
-
-for(let s of service){
-  let service_card = document.getElementById("s" + s.id).innerHTML += `
-  <div class="card">
-    <div class="card-header">
-    ${s.name}
+  for (let s of service) {
+    let service_card = (document.getElementById("s" + s.id).innerHTML += `
+    <div class="card">
+      <div class="card-header">
+      ${s.name}
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Building: ${s.building}</li>
+        <li class="list-group-item">Room: ${s.room}</li>
+        <li class="list-group-item">OU: ${s.ou}</li>
+      </ul>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Building: ${s.building}</li>
-      <li class="list-group-item">Room: ${s.room}</li>
-      <li class="list-group-item">OU: ${s.ou}</li>
-    </ul>
-  </div>
-  `
+    `)
+  }
 }
 
+if (window.location.pathname === "/pages/office-organization.html") {
+  for (let l = 0, y = items.length; l < y; l++) {
+    document.getElementById("inventoryTable").innerHTML += `<tr id="i${items[l].id}" ></tr>`
+  }
+
+  for (let i of items) {
+    let itemlist = (document.getElementById("i" + i.id).innerHTML += `
+      <td>${i.name}</td>
+      <td>${i.type}</td>
+      <td>${i.location}</td>
+    `)
+  }
+
+  document.getElementById("itemtablesearch").addEventListener("input", function() {
+    let input = this.value.toLowerCase();
+    let table = document.getElementById("orgTable");
+    let tbody = table.getElementsByTagName("tbody")[0];
+    let rows = tbody.getElementsByTagName("tr");
+  
+    for (let row of rows) {
+      let cells = row.getElementsByTagName("td");
+      let shouldShow = false;
+  
+      for (let cell of cells) {
+        if (cell) {
+          let cellText = cell.textContent.toLowerCase();
+          if (cellText.indexOf(input) > -1) {
+            shouldShow = true;
+            break;
+          }
+        }
+      }
+  
+      
+      if (shouldShow) {
+        row.style.display = "";
+      } else {
+        row.style.display = "none";
+      }
+    }
+  })}

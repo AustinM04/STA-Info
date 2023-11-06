@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Office organization</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="office organization" />
-    <link rel="shortcut icon" type="image/png" href="/images/Office-organization.png" />
-    <link rel="stylesheet" href="/stylesheets/main.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Office organization</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="office organization" />
+  <link rel="shortcut icon" type="image/png" href="/images/Office-organization.png" />
+  <link rel="stylesheet" href="/stylesheets/main.css" />
+</head>
 
 
-  <body class="bg-dark">
-    <div id="navbar"></div>
-    
+<body class="bg-dark">
+  <div id="navbar"></div>
+  
+  
+    <div class="container col-10 my-5 table-responsive">
 
-    
+      <div class="row d-flex mb-2 col-12 col-lg-6">
+        <div class="col-1 d-none d-lg-block text-white fs-4"><i class="bi bi-search"></i></div>
+        <div class="col-12 col-lg-5 offset-lg-1"><input type="text" class="form-control " id="itemtablesearch" placeholder="Search here..." /></div>
+      </div>
+      <div class="row">
+        <table id="orgTable" class="table table-hover table-dark searchable sortable">
+          <thead>
+            <tr>
+              <th class="th-sm">Name</th>
+              <th class="th-sm">Type</th>
+              <th class="th-sm">Location</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryTable"></tbody>
+          <tfoot>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Location</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      
+    </div>
+  
 
-    <script type="module" src="/javascripts/main.js"></script>
-  </body>
+
+  
+  
+  
+
+  <script type="module" src="/javascripts/main.js"></script>
+</body>
 </html>
