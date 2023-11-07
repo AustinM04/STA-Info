@@ -27,6 +27,10 @@
   transition: all 0.5s ease;
 }
 
+.transparent-black{
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
 @media (max-width: 991px) {
   .nav-link:hover {
     background: linear-gradient(90deg, #492365, #8446ac);

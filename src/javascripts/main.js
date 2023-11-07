@@ -40,8 +40,8 @@ if (window.location.pathname === "/pages/maps&ous.html") {
 
   for (let s of service) {
     let service_card = (document.getElementById("s" + s.id).innerHTML += `
-    <div class="card">
-      <div class="card-header">
+    <div class="card h-100">
+      <div class="card-header webercolor text-white">
       ${s.name}
       </div>
       <ul class="list-group list-group-flush">
