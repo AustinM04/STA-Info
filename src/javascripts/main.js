@@ -12,13 +12,13 @@ document.getElementById("navbar").innerHTML = `
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link" href="/pages/index.html">Home</a>
-              <a class="nav-link" href="/pages/maps&ous.html">Maps & OUs</a>
-              <a class="nav-link" href="/pages/imaging.html">Imaging</a>
-              <a class="nav-link" href="/pages/post-image.html">Post-Image</a>
-              <a class="nav-link" href="/pages/office-organization.html">Office Organization</a>
-              <a class="nav-link" href="/pages/readiness.html">Readiness</a>
-              <a class="nav-link" href="/pages/faqs.html">FAQs</a>
+              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="maps&ous.html">Maps & OUs</a>
+              <a class="nav-link" href="imaging.html">Imaging</a>
+              <a class="nav-link" href="post-image.html">Post-Image</a>
+              <a class="nav-link" href="office-organization.html">Office Organization</a>
+              <a class="nav-link" href="readiness.html">Readiness</a>
+              <a class="nav-link" href="faqs.html">FAQs</a>
             </div>
           </div>
         </div>
@@ -33,7 +33,7 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   }
 })
 
-if (window.location.pathname === "/pages/maps&ous.html") {
+if (window.location.pathname === "/maps&ous.html") {
   for (let g = 0, i = service.length; g < i; g++) {
     document.getElementById("grid").innerHTML += `<div class="col carhov" id="s${service[g].id}"></div>`
   }
@@ -54,7 +54,7 @@ if (window.location.pathname === "/pages/maps&ous.html") {
   }
 }
 
-if (window.location.pathname === "/pages/office-organization.html") {
+if (window.location.pathname === "/office-organization.html") {
   for (let l = 0, y = items.length; l < y; l++) {
     document.getElementById("inventoryTable").innerHTML += `<tr id="i${items[l].id}" ></tr>`
   }
