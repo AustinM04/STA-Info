@@ -39,7 +39,7 @@ if (window.location.pathname === "/pages/maps&ous.html") {
   }
 
   for (let s of service) {
-    let service_card = (document.getElementById("s" + s.id).innerHTML += `
+    document.getElementById("s" + s.id).innerHTML += `
     <div class="card h-100">
       <div class="card-header webercolor text-white">
       ${s.name}
@@ -50,7 +50,7 @@ if (window.location.pathname === "/pages/maps&ous.html") {
         <li class="list-group-item">OU: ${s.ou}</li>
       </ul>
     </div>
-    `)
+    `
   }
 }
 
@@ -60,11 +60,11 @@ if (window.location.pathname === "/pages/office-organization.html") {
   }
 
   for (let i of items) {
-    let itemlist = (document.getElementById("i" + i.id).innerHTML += `
+    document.getElementById("i" + i.id).innerHTML += `
       <td>${i.name}</td>
       <td>${i.type}</td>
       <td>${i.location}</td>
-    `)
+    `
   }
 
   document.getElementById("itemtablesearch").addEventListener("input", function() {
