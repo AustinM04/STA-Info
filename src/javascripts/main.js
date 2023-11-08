@@ -37,7 +37,7 @@ document.querySelectorAll(".nav-link").forEach((link) => {
 
 if (window.location.pathname === "/pages/maps&ous.html") {
   for (let g = 0, i = service.length; g < i; g++) {
-    document.getElementById("grid").innerHTML += `<div class="col carhov" id="s${service[g].id}"></div>`
+    document.getElementById("grid").innerHTML += `<div class="col" id="s${service[g].id}"></div>`
   }
 
   for (let s of service) {
@@ -97,3 +97,31 @@ if (window.location.pathname === "/pages/office-organization.html") {
       }
     }
   })}
+
+  document.getElementById("gridsearch").addEventListener("input", function() {
+    let input = this.value.toLowerCase();
+    let grid = document.getElementById("grid");
+    let cards = grid.getElementsByClassName("card");
+  
+    for (let card of cards) {
+      let cells = card.getElementsByClassName("list-group-item");
+      let shouldShow = false;
+  
+      for (let cell of cells) {
+        if (cell) {
+          let cellText = cell.textContent.toLowerCase();
+          if (cellText.indexOf(input) > -1) {
+            shouldShow = true;
+            break;
+          }
+        }
+      }
+  
+      if (shouldShow) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    }
+  });
+  
