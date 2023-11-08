@@ -55,6 +55,8 @@ if (window.location.pathname === "/pages/maps&ous.html") {
     `
   }
 
+  //TODO: fix card alignment when searching
+
   document.getElementById("gridsearch").addEventListener("input", function() {
     let input = this.value.toLowerCase();
     let grid = document.getElementById("grid");
@@ -74,7 +76,7 @@ if (window.location.pathname === "/pages/maps&ous.html") {
           }
         }
       }
-      
+
       for (let celt of celltitle) {
         if (celt) {
           let cellText = celt.textContent.toLowerCase();
