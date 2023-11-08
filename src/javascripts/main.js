@@ -3,6 +3,8 @@ import "bootstrap"
 import { service } from "./service"
 import { items } from "./items"
 
+
+
 document.getElementById("navbar").innerHTML = `
 <nav class="navbar navbar-expand-lg webercolor navbar-dark py-1">
         <div class="container-fluid align-items-baseline">
